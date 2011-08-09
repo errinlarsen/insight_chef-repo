@@ -1,0 +1,43 @@
+= DESCRIPTION:
+
+This cookbook installs and configures openssh server.
+
+Using the attributes in a role or node, it is possible to lock down the openssh server to be more secure. It's important to review them carefully before running with altered attributes as it is possible to lock yourself out with specific values.
+
+= REQUIREMENTS:
+
+Requires that the platform has an openssh package and its configuration file is /etc/ssh/sshd_config.
+
+= ATTRIBUTES:
+
+The following attributes are set by default, and may be overridden in a role or node:
+
+    node[:sshd][:port]               = 22
+    node[:sshd][:pubkey_auth]        = true
+    node[:sshd][:password_auth]      = true
+    node[:sshd][:permit_root_login]  = true
+    node[:sshd][:use_dns]            = false
+
+They are passed into the sshd_config template and sshd config is reloaded.
+
+= USAGE:
+
+To use this cookbook, set the attributes above on the node via a role or on the node object itself. In a role.rb:
+
+    "sshd" => {
+      "port" => 30000,
+      "pubkey_auth" => true,
+      "password_auth" => false,
+      "permit_root_login" => false,
+      "use_dns" => false
+    }
+
+In JSON (role.json or on the node object):
+
+  "sshd": {
+    "port": 30000,
+    "pubkey_auth": true,
+    "password_auth": false,
+    "permit_root_login": false,
+    "use_dns": false
+  }

@@ -52,3 +52,10 @@ service "ssh" do
   action [ :enable, :start ]
 end
 
+template "/etc/ssh/sshd_config" do
+  source "sshd_config.erb"
+  owner "root"
+  group "root"
+  mode "0644"
+  notifies :reload, resources(:service => "ssh"), :immediately
+end

@@ -38,11 +38,81 @@
   "replacing": {
   },
   "attributes": {
+    "sshd/port": {
+      "display_name": "Port number",
+      "description": "Port number on which to accept ssh connections",
+      "default": "22",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "sshd/pubkey_auth": {
+      "display_name": "Enable public key authentication",
+      "description": "Enable to allow public key authentication",
+      "default": "true",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "sshd/password_auth": {
+      "display_name": "Enable password authentication",
+      "description": "Enable to allow plaintext password authentication",
+      "default": "true",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "sshd/permit_root_login": {
+      "display_name": "Allow root login",
+      "description": "Enable to allow root user logins",
+      "default": "true",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "sshd/use_dns": {
+      "display_name": "Use DNS",
+      "description": "Enable to perform server-side DNS lookups on connecting hosts",
+      "default": "false",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    }
   },
   "groupings": {
   },
   "recipes": {
     "openssh": "Installs openssh"
   },
-  "version": "0.8.0"
+  "version": "0.8.1"
 }
