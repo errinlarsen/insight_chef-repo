@@ -28,7 +28,7 @@ template "/etc/sysconfig/selinux" do
   source "sysconfig/selinux.erb"
   variables(
     :selinux => "permissive",
-    :selinuxtype => "targeted",
+    :selinuxtype => "targeted"
   )
 end
 
