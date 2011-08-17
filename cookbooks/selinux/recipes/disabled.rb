@@ -18,6 +18,10 @@
 # limitations under the License.
 #
 
+package "libselinux-ruby" do
+  action :install
+end
+
 execute "disable selinux enforcement" do
   only_if "selinuxenabled"
   command "setenforce 0"
