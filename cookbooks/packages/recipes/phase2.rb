@@ -21,7 +21,6 @@
 PKGS = %w[
   which
   screen
-  git
   mysql-devel
   mysql-server
   libxml2-devel
