@@ -24,14 +24,12 @@ PKGS = %w[
   git
   mysql-devel
   mysql-server
-  libxm2-devel
+  libxml2-devel
   libxslt-devel
   curl-devel
   nc
-  memcached
   httpd-devel
   apr-devel
-  ntp
 ]
 
 PKGS.each do |pkg|
