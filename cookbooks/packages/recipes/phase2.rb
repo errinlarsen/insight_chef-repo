@@ -33,7 +33,7 @@ PKGS = %w[
 
 GEMS = {
   "rails"                       => {:version => '2.3.3'},
-  "mysql"                       => {:version => '2.8.1', :options => "-- -with-mysql-config=’/usr/bin/mysql_config’"}, 
+  "mysql"                       => {:version => '2.8.1', :options => "-- -with-mysql-config='/usr/bin/mysql_config'"}, 
   "alexvollmer-daemon-spawn"    => {:version => '0.2.0', :source => 'http://gems.github.com'},
   "memcache-client"             => {:version => '1.8.5'},
   "collectiveidea-delayed_job"  => {:version => '1.8.2', :source => 'http://gems.github.com'},
@@ -44,7 +44,7 @@ GEMS = {
   "fastercsv"                   => {:version => '1.5.3'},
   "spreadsheet"                 => {:version => '0.6.4.1'},
   "calendar_date_select"        => {:version => '1.16.1'},
-  "selecium-client"             => {:version => '1.2.18'},
+  "selenium-client"             => {:version => '1.2.18'},
   "thoughtbot-shoulda"          => {:version => '2.10.1', :source => 'http://gems.github.com'},
   "flexmock"                    => {:version => '0.8.7'},
   "jgre-monkeyspecdoc"          => {:version => '0.9.5', :source => 'http://gems.github.com'},
@@ -55,7 +55,7 @@ GEMS = {
   "rubyzip"                     => {:version => '0.9.4'},
   "rubyist-aasm"                => {:version => '2.1.1', :source => 'http://gems.github.com'},
   "clickatell"                  => {:version => '0.8.2'},
-  "hiroshi-pony"                => {:version => '0.8.2', :source => 'http://gems.github.com'},
+  "hiroshi-pony"                => {:version => '0.3.1', :source => 'http://gems.github.com'},
   "httparty"                    => {:version => '0.5.2'},
   "net-sftp"                    => {:version => '>=2.0.2'},
   "slither"                     => {:version => '0.99.4'},
