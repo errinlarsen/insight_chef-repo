@@ -23,7 +23,7 @@
 # limitations under the License.
 
 include_recipe "apache2"
-include_recipe "build-essential"
+#include_recipe "build-essential"
 
 if platform?("centos","redhat")
   package "httpd-devel"
@@ -36,9 +36,9 @@ else
   end
 end
 
-gem_package "passenger" do
-  version node[:passenger][:version]
-end
+#gem_package "passenger" do
+#  version node[:passenger][:version]
+#end
 
 execute "passenger_module" do
   command 'echo -en "\n\n\n\n" | passenger-install-apache2-module'
