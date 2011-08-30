@@ -36,9 +36,9 @@ else
   end
 end
 
-#gem_package "passenger" do
-#  version node[:passenger][:version]
-#end
+gem_package "passenger" do
+  version node[:passenger][:version]
+end
 
 execute "passenger_module" do
   command 'echo -en "\n\n\n\n" | passenger-install-apache2-module'
