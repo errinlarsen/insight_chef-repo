@@ -12,8 +12,8 @@ if [ ! -f /usr/bin/chef-client ]; then
   cd ruby-enterprise-1.8.7-2010.02
   ./installer -a /opt/ruby-enterprise-1.8.7-2010.02
   
-  gem install ohai --no-rdoc --no-ri --verbose
-  gem install chef --no-rdoc --no-ri --verbose <%= bootstrap_version_string %>
+  /opt/ruby-enterprise-1.8.7-2010.02/bin/gem install ohai --no-rdoc --no-ri --verbose
+  /opt/ruby-enterprise-1.8.7-2010.02/bin/gem install chef --no-rdoc --no-ri --verbose <%= bootstrap_version_string %>
 
   ln -s /opt/ruby-enterprise-1.8.7-2010.02/bin/chef-client /usr/bin/
   ln -s /opt/ruby-enterprise-1.8.7-2010.02/bin/* /usr/local/bin/
